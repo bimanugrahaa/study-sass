@@ -1,0 +1,37 @@
+//SASS Variables
+
+//Global variables that can be accessed with all element
+$primary-color: wheat;
+$secondary-color: blue;
+$text-color: salmon;
+
+body {
+  $primary-color: wheat;
+  //Only body and their nest that can used local variables
+  //Declare the same variables name with existing global variables will make
+  //element inside body used the local one.
+
+  //   $primary-color: wheat !global; //Become global variables
+  //Declare the same variables name with existing global variables WITH !global properties
+  //will make the other element using this as global variables.
+
+  background-color: $primary-color;
+}
+
+// h1 {
+//   color: $text-color;
+// }
+
+//SASS will recognized that it was same when used (-) and (_) for variables name
+//$primary-color === $primary_color
+
+//SASS Map
+$alert: (
+  "danger": red,
+  "success": green,
+  "warning": orange,
+);
+
+h1 {
+  color: map-get($alert, "success");
+}
