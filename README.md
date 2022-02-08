@@ -1,1 +1,3 @@
-# study-sass
+# Study SASS
+
+Study SASS from WPU!
