@@ -1,0 +1,16 @@
+@use "mixin";
+
+.container {
+  @include mixin.flex-box(row-reverse, space-around);
+  width: 600px;
+  height: 400px;
+  background-color: gray;
+
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 60px;
+  }
+}
